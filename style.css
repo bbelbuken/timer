@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #374151;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #111827;
+    border-radius: 20px;
+    padding: 3rem;
+    gap: 2rem;
+
+}
+
+.timer-container {
+    width: 250px;
+    height: 250px;
+    background-color: #1f2937;
+    border-radius: 50%;
+    position: relative;
+    border: 2px solid white;
+}
+
+.timer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* offsets element in its own width & height not containers */
+    text-align: center;
+    font-size: 3rem;
+    color: #bfdbfe;
+
+}
+
+.circle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    left: 50%;
+    top: -0.5%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #93c5fd;
+    position: relative;
+}
+
+svg {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.btn-restart {
+    position: relative; 
+}
+
+.btn-restart svg {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%) scale(1.4);
+}
