@@ -27,7 +27,7 @@ h1 {
     align-items: center;
     background-color: #111827;
     border-radius: 20px;
-    padding: 3rem;
+    padding: 4rem;
     gap: 2rem;
 
 }
@@ -75,17 +75,13 @@ h1 {
     height: 40px;
     border-radius: 50%;
     border: none;
-    background-color: #93c5fd;
     position: relative;
-}
-
-svg {
-    position: absolute;
-    transform: translate(-50%, -50%);
 }
 
 .btn-restart {
     position: relative; 
+    cursor: pointer;
+    background-color: #93c5fd;
 }
 
 .btn-restart svg {
@@ -93,4 +89,25 @@ svg {
     top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%) scale(1.4);
+}
+
+.btn-play {
+    position: relative; 
+    cursor: pointer;
+}
+
+.btn-play svg {
+    position: absolute;
+    top: 50%; 
+    left: 52%; 
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+.btn-blue{
+    background-color: #93c5fd;
+}
+
+.btn-green {
+    background-color: greenyellow;
 }
