@@ -1,7 +1,9 @@
 const playButton = document.querySelector("#play");
+const restartButton = document.querySelector("#restart")
 const svgPlay = playButton.querySelector("#svg-play");
 const svgPause = playButton.querySelector("#svg-pause");
 const timerEL = document.querySelector(".timer")
+
 
 svgPause.style.display = "none"
 
@@ -21,7 +23,7 @@ const toggleSVG = () => {
 let number = 60;
 let timerInterval;
 const runTimer = () => {
-    if (number > 0) {
+    if (number > 1) {
             number--;
     timerEL.innerHTML = `00:${number < 10 ? `0` + number : number}`
     } else {
@@ -33,8 +35,6 @@ const runTimer = () => {
         playButton.classList.toggle("btn-green")
         
     }
-
-
 }
 
 
@@ -52,4 +52,21 @@ playButton.addEventListener("click", (event) => {
         }
     }
 });
+
+restartButton.addEventListener("click", () => {
+    playButton.classList.contains("btn-green")
+        playButton.classList.toggle("btn-green");
+        svgPause.style.display = "none"
+        svgPlay.style.display = "block"
+
+    if (timerInterval) {
+        clearInterval(timerInterval)
+        timerInterval = null
+    }
+
+    number = 60;
+    timerEL.innerHTML= "01:00"
+    
+
+})
 
